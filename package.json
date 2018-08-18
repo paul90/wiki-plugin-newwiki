@@ -1,0 +1,39 @@
+{
+  "name": "wiki-plugin-newwiki",
+  "version": "18.08.07",
+  "description": "Federated Wiki - NewWiki Plugin",
+  "keywords": [
+    "newwiki",
+    "wiki",
+    "federated wiki",
+    "plugin"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "url": "http://example.com"
+  },
+  "contributors": [],
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "expect.js": "*",
+    "grunt": "^1.0.3",
+    "grunt-contrib-coffee": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "*"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fedwiki/wiki-plugin-newwiki.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fedwiki/wiki-plugin-newwiki/issues"
+  },
+  "engines": {
+    "node": ">0.10"
+  }
+}

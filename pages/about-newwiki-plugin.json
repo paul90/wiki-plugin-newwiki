@@ -1,0 +1,37 @@
+{
+  "title": "About NewWiki Plugin",
+  "story": [
+  {
+    "type": "paragraph",
+    "id": "49267a704f6bfcd0",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "newwiki",
+    "id": "f1e5e6f6c9833748",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+],
+  "journal": [
+  {
+    "type": "create",
+    "item": {
+      "title": "About NewWiki Plugin",
+      "story": [
+  {
+    "type": "paragraph",
+    "id": "49267a704f6bfcd0",
+    "text": "Here we describe the purpose of the plugin and include a sample."
+  },
+  {
+    "type": "newwiki",
+    "id": "f1e5e6f6c9833748",
+    "text": "This is text in the new plugin. You can *double-click* to edit it too."
+  }
+]
+    },
+    "date": 1533537412000,
+    "certificate": "from mkplugin.sh"
+  }
+]
+}

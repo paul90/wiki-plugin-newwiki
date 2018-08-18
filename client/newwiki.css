@@ -1,0 +1,12 @@
+.newwiki p {
+  margin: 0;
+}
+
+.newwiki .template {
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.newwiki .template .description {
+  font-style: italic;
+}
