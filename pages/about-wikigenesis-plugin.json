@@ -1,5 +1,5 @@
 {
-  "title": "About NewWiki Plugin",
+  "title": "About WikiGenesis Plugin",
   "story": [
   {
     "type": "paragraph",
@@ -7,7 +7,7 @@
     "text": "Here we describe the purpose of the plugin and include a sample."
   },
   {
-    "type": "newwiki",
+    "type": "wikigenesis",
     "id": "f1e5e6f6c9833748",
     "text": "This is text in the new plugin. You can *double-click* to edit it too."
   }
@@ -16,7 +16,7 @@
   {
     "type": "create",
     "item": {
-      "title": "About NewWiki Plugin",
+      "title": "About WikiGenesis Plugin",
       "story": [
   {
     "type": "paragraph",
@@ -24,7 +24,7 @@
     "text": "Here we describe the purpose of the plugin and include a sample."
   },
   {
-    "type": "newwiki",
+    "type": "wikigenesis",
     "id": "f1e5e6f6c9833748",
     "text": "This is text in the new plugin. You can *double-click* to edit it too."
   }

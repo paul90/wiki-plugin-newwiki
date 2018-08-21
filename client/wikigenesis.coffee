@@ -89,8 +89,8 @@ submit = ($item, item) ->
 
 emit = ($item, item) ->
 
-  pluginOrigin = wiki.pluginRoutes["newwiki"]
-  pluginCssUrl = pluginOrigin + '/client/newwiki.css'
+  pluginOrigin = wiki.pluginRoutes["wikigenesis"]
+  pluginCssUrl = pluginOrigin + '/client/wikigenesis.css'
   if (!$("link[href='#{pluginCssUrl}']").length)
     $("<link rel='stylesheet' href='#{pluginCssUrl}' type='text/css'>").appendTo("head")
 
@@ -122,5 +122,5 @@ bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
   $item.find('input').dblclick (e) -> e.stopPropagation()
 
-window.plugins.newwiki = {emit, bind} if window?
+window.plugins.wikigenesis = {emit, bind} if window?
 module.exports = {expand} if module?

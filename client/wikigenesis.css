@@ -1,0 +1,12 @@
+.wikigenesis p {
+  margin: 0;
+}
+
+.wikigenesis .template {
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.wikigenesis .template .description {
+  font-style: italic;
+}

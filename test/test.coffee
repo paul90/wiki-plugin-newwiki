@@ -1,13 +1,13 @@
-# build time tests for newwiki plugin
+# build time tests for wikigenesis plugin
 # see http://mochajs.org/
 
-newwiki = require '../client/newwiki'
+wikigenesis = require '../client/wikigenesis'
 expect = require 'expect.js'
 
-describe 'newwiki plugin', ->
+describe 'wikigenesis plugin', ->
 
   describe 'expand', ->
 
     it 'can make itallic', ->
-      result = newwiki.expand 'hello *world*'
+      result = wikigenesis.expand 'hello *world*'
       expect(result).to.be 'hello <i>world</i>'

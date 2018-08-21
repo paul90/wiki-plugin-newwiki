@@ -1,17 +1,16 @@
 {
-  "name": "wiki-plugin-newwiki",
-  "version": "18.08.07",
-  "description": "Federated Wiki - NewWiki Plugin",
+  "name": "wiki-plugin-wikigenesis",
+  "version": "21.08.07",
+  "description": "Federated Wiki - WikiGenesis Plugin",
   "keywords": [
-    "newwiki",
     "wiki",
     "federated wiki",
     "plugin"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com",
-    "url": "http://example.com"
+    "name": "Paul Rodwell",
+    "email": "paul.rodwell@btinternet.com",
+    "url": "https://rodwell.me"
   },
   "contributors": [],
   "scripts": {
@@ -28,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fedwiki/wiki-plugin-newwiki.git"
+    "url": "https://github.com/paul90/wiki-plugin-wikigenesis.git"
   },
   "bugs": {
-    "url": "https://github.com/fedwiki/wiki-plugin-newwiki/issues"
+    "url": "https://github.com/paul90/wiki-plugin-wikigenesis/issues"
   },
   "engines": {
-    "node": ">0.10"
+    "node": ">=8.11"
   }
 }

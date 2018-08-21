@@ -1,6 +1,6 @@
-# Federated Wiki - NewWiki Plugin
+# Federated Wiki - WikiGenesis Plugin
 
-This plugin, type: newwiki, is used in the dat variant of Federated Wiki for the
+This plugin, type: wikigenesis, is used in the dat variant of Federated Wiki for the
 creation of new Federated Wiki sites.
 
 The default behaviour is to create a new wiki using ... as a template. This behaviour
