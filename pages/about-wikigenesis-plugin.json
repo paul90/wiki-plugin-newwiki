@@ -1,37 +1,299 @@
 {
   "title": "About WikiGenesis Plugin",
   "story": [
-  {
-    "type": "paragraph",
-    "id": "49267a704f6bfcd0",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "wikigenesis",
-    "id": "f1e5e6f6c9833748",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-],
-  "journal": [
-  {
-    "type": "create",
-    "item": {
-      "title": "About WikiGenesis Plugin",
-      "story": [
-  {
-    "type": "paragraph",
-    "id": "49267a704f6bfcd0",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "wikigenesis",
-    "id": "f1e5e6f6c9833748",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "49267a704f6bfcd0",
+      "text": "The WikiGenesis plugin allows you to create a new wiki site. We use an empty wiki as a template for your new wiki."
     },
-    "date": 1533537412000,
-    "certificate": "from mkplugin.sh"
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "3900e945cd3355c7",
+      "text": "See [https://github.com/paul90/wiki-plugin-wikigenesis GitHub] for plugin source."
+    },
+    {
+      "type": "wikigenesis",
+      "id": "f1e5e6f6c9833748",
+      "text": "LINEUP #view/welcome-visitors/view/fred "
+    },
+    {
+      "type": "markdown",
+      "id": "6f4bb15f36c85a34",
+      "text": "# Features"
+    },
+    {
+      "type": "paragraph",
+      "id": "59b89b6192f32bcc",
+      "text": "In addition to the new wiki's name, description and owner's name, there are two items that can be configured in the WikiGenesis plugin. The wiki that will be used as a template, and the lineup that will be presented when the new wiki is initally openned."
+    },
+    {
+      "type": "markdown",
+      "id": "d3c538d48f079fb1",
+      "text": "TEMPLATE *dat address*"
+    },
+    {
+      "type": "markdown",
+      "id": "6f224d33b8a57a8b",
+      "text": "*Dat address* points to an empty wiki site that will be copied to create your new wiki site."
+    },
+    {
+      "type": "markdown",
+      "id": "07bf55b2eccbd83d",
+      "text": "LINEUP *wiki lineup*"
+    },
+    {
+      "type": "markdown",
+      "id": "798629c59ded56fc",
+      "text": "The wiki lineup you would like to appear when the new wiki is opened. The default is `#view/welcome-visitors/view/youre-new-here`."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About WikiGenesis Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "49267a704f6bfcd0",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "wikigenesis",
+            "id": "f1e5e6f6c9833748",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1533537412000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "49267a704f6bfcd0",
+      "item": {
+        "type": "paragraph",
+        "id": "49267a704f6bfcd0",
+        "text": "The WikiGenesis plugin allows you to create a new wiki site. We use an empty wiki as a template for your new wiki."
+      },
+      "date": 1535447483228
+    },
+    {
+      "type": "add",
+      "id": "3900e945cd3355c7",
+      "item": {
+        "type": "paragraph",
+        "id": "3900e945cd3355c7",
+        "text": "See [https://github.com/paul90/wiki-plugin-wikigenesis GitHub] for plugin source."
+      },
+      "after": "49267a704f6bfcd0",
+      "date": 1535447663446
+    },
+    {
+      "type": "edit",
+      "id": "f1e5e6f6c9833748",
+      "item": {
+        "type": "wikigenesis",
+        "id": "f1e5e6f6c9833748",
+        "text": " "
+      },
+      "date": 1535447695749
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "6f4bb15f36c85a34",
+        "text": "# Features"
+      },
+      "id": "6f4bb15f36c85a34",
+      "type": "add",
+      "after": "f1e5e6f6c9833748",
+      "date": 1535447701983
+    },
+    {
+      "type": "edit",
+      "id": "6f4bb15f36c85a34",
+      "item": {
+        "type": "markdown",
+        "id": "6f4bb15f36c85a34",
+        "text": "# Features"
+      },
+      "date": 1535447713090
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "59b89b6192f32bcc"
+      },
+      "id": "59b89b6192f32bcc",
+      "type": "add",
+      "after": "6f4bb15f36c85a34",
+      "date": 1535451974711
+    },
+    {
+      "type": "edit",
+      "id": "59b89b6192f32bcc",
+      "item": {
+        "type": "paragraph",
+        "id": "59b89b6192f32bcc",
+        "text": "In addition to the new wiki's name, description and owner's name, there are two items that can be configured in the WikiGenesis plugin. The wiki that will be used as a template, and the lineup that will be presented when the new wiki is initally openned."
+      },
+      "date": 1535619113101
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "d3c538d48f079fb1",
+        "text": "TEMPLATE *dat key*"
+      },
+      "id": "d3c538d48f079fb1",
+      "type": "add",
+      "after": "59b89b6192f32bcc",
+      "date": 1535966296647
+    },
+    {
+      "type": "edit",
+      "id": "d3c538d48f079fb1",
+      "item": {
+        "type": "markdown",
+        "id": "d3c538d48f079fb1",
+        "text": "TEMPLATE *dat key*"
+      },
+      "date": 1535966646047
+    },
+    {
+      "type": "edit",
+      "id": "d3c538d48f079fb1",
+      "item": {
+        "type": "markdown",
+        "id": "d3c538d48f079fb1",
+        "text": "TEMPLATE *dat address*"
+      },
+      "date": 1535966693729
+    },
+    {
+      "type": "edit",
+      "id": "d3c538d48f079fb1",
+      "item": {
+        "type": "markdown",
+        "id": "d3c538d48f079fb1",
+        "text": "TEMPLATE *dat address*"
+      },
+      "date": 1535966765164
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "6f224d33b8a57a8b",
+        "text": "*Dat address* points to an empty wiki site that will be copied to create your new wiki site."
+      },
+      "id": "6f224d33b8a57a8b",
+      "type": "add",
+      "after": "d3c538d48f079fb1",
+      "date": 1535967296329
+    },
+    {
+      "type": "edit",
+      "id": "6f224d33b8a57a8b",
+      "item": {
+        "type": "markdown",
+        "id": "6f224d33b8a57a8b",
+        "text": "*Dat address* points to an empty wiki site that will be copied to create your new wiki site."
+      },
+      "date": 1535968120637
+    },
+    {
+      "type": "edit",
+      "id": "6f224d33b8a57a8b",
+      "item": {
+        "type": "markdown",
+        "id": "6f224d33b8a57a8b",
+        "text": "*Dat address* points to an empty wiki site that will be copied to create your new wiki site."
+      },
+      "date": 1535968332586
+    },
+    {
+      "type": "edit",
+      "id": "f1e5e6f6c9833748",
+      "item": {
+        "type": "wikigenesis",
+        "id": "f1e5e6f6c9833748",
+        "text": "LINEUP #view/welcome-visitors/view/fred "
+      },
+      "date": 1536834253436
+    },
+    {
+      "type": "edit",
+      "id": "f1e5e6f6c9833748",
+      "item": {
+        "type": "wikigenesis",
+        "id": "f1e5e6f6c9833748",
+        "text": "LINEUP #view/welcome-visitors/view/fred "
+      },
+      "date": 1536834345149
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "07bf55b2eccbd83d",
+        "text": "LINEUP *wiki lineup*"
+      },
+      "id": "07bf55b2eccbd83d",
+      "type": "add",
+      "after": "6f224d33b8a57a8b",
+      "date": 1536835587947
+    },
+    {
+      "type": "edit",
+      "id": "07bf55b2eccbd83d",
+      "item": {
+        "type": "markdown",
+        "id": "07bf55b2eccbd83d",
+        "text": "LINEUP *wiki lineup*"
+      },
+      "date": 1536835672288
+    },
+    {
+      "type": "edit",
+      "id": "07bf55b2eccbd83d",
+      "item": {
+        "type": "markdown",
+        "id": "07bf55b2eccbd83d",
+        "text": "LINEUP *wiki lineup*"
+      },
+      "date": 1536835676029
+    },
+    {
+      "type": "edit",
+      "id": "07bf55b2eccbd83d",
+      "item": {
+        "type": "markdown",
+        "id": "07bf55b2eccbd83d",
+        "text": "LINEUP *wiki lineup*"
+      },
+      "date": 1536835693517
+    },
+    {
+      "type": "add",
+      "id": "798629c59ded56fc",
+      "item": {
+        "type": "markdown",
+        "id": "798629c59ded56fc",
+        "text": "The wiki lineup you would like to appear when the new wiki is opened. The default is `#view/welcome-visitors/view/youre-new-here`."
+      },
+      "after": "07bf55b2eccbd83d",
+      "date": 1536835761218
+    },
+    {
+      "type": "edit",
+      "id": "798629c59ded56fc",
+      "item": {
+        "type": "markdown",
+        "id": "798629c59ded56fc",
+        "text": "The wiki lineup you would like to appear when the new wiki is opened. The default is `#view/welcome-visitors/view/youre-new-here`."
+      },
+      "date": 1536835805319
+    }
+  ],
+  "plugin": "wikigenesis"
 }

@@ -1,0 +1,128 @@
+{
+  "title": "Creating a New Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "ecc5ed451bbe7af2",
+      "text": "We create a new wiki site using an empty wiki as a template. If you are creating a wiki as part of a community, they may have a modified create wiki page."
+    },
+    {
+      "type": "paragraph",
+      "id": "baf1188e0516c91f",
+      "text": "In the form below the wiki name and description will be used in the creation of the dat for your wiki, and will help you locate your wiki in your library. The owner’s name you enter will appear as the name the site is owned by in the wiki footer."
+    },
+    {
+      "type": "wikigenesis",
+      "id": "f1e5e6f6c9833748",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "id": "77d2cef6f22b5893",
+      "text": "When you press \"Create Wiki\", you will get a prompt asking permission to create a new dat. A dat site is be created for your wiki, and your new wiki will be openned in a new browser tab."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Creating a New Wiki",
+        "story": []
+      },
+      "date": 1535964977628
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "ecc5ed451bbe7af2",
+        "text": "We create a new wiki site using an empty wiki as a template. If you are creating a wiki as part of a community, they may have a modified create wiki page."
+      },
+      "id": "ecc5ed451bbe7af2",
+      "type": "add",
+      "date": 1535964979753
+    },
+    {
+      "type": "edit",
+      "id": "ecc5ed451bbe7af2",
+      "item": {
+        "type": "paragraph",
+        "id": "ecc5ed451bbe7af2",
+        "text": "We create a new wiki site using an empty wiki as a template. If you are creating a wiki as part of a community, they may have a modified create wiki page."
+      },
+      "date": 1535965100465
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "baf1188e0516c91f",
+        "text": "In the form below the wiki name and description will be used in the creation of the dat for your wiki, and will help you locate your wiki in your library. The owner’s name you enter will appear as the name the site is owned by in the wiki footer."
+      },
+      "id": "baf1188e0516c91f",
+      "type": "add",
+      "after": "ecc5ed451bbe7af2",
+      "date": 1535965420376
+    },
+    {
+      "type": "edit",
+      "id": "baf1188e0516c91f",
+      "item": {
+        "type": "paragraph",
+        "id": "baf1188e0516c91f",
+        "text": "In the form below the wiki name and description will be used in the creation of the dat for your wiki, and will help you locate your wiki in your library. The owner’s name you enter will appear as the name the site is owned by in the wiki footer."
+      },
+      "date": 1535965424342
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "wikigenesis",
+        "id": "f1e5e6f6c9833748",
+        "text": " "
+      },
+      "after": "baf1188e0516c91f",
+      "id": "f1e5e6f6c9833748",
+      "date": 1535965434567
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "77d2cef6f22b5893",
+        "text": "When you press \"Create Wiki\", you will get a permission prompt, a new dat site will be created for your wiki, and it will open in a new tab."
+      },
+      "id": "77d2cef6f22b5893",
+      "type": "add",
+      "after": "f1e5e6f6c9833748",
+      "date": 1535965579906
+    },
+    {
+      "type": "edit",
+      "id": "77d2cef6f22b5893",
+      "item": {
+        "type": "paragraph",
+        "id": "77d2cef6f22b5893",
+        "text": "When you press \"Create Wiki\", you will get a permission prompt, a new dat site will be created for your wiki, and it will open in a new tab."
+      },
+      "date": 1535965651502
+    },
+    {
+      "type": "edit",
+      "id": "77d2cef6f22b5893",
+      "item": {
+        "type": "paragraph",
+        "id": "77d2cef6f22b5893",
+        "text": "When you press \"Create Wiki\", you will get a permission prompt, a new dat site will be created for your wiki, and it will open in a new tab."
+      },
+      "date": 1535966043311
+    },
+    {
+      "type": "edit",
+      "id": "77d2cef6f22b5893",
+      "item": {
+        "type": "paragraph",
+        "id": "77d2cef6f22b5893",
+        "text": "When you press \"Create Wiki\", you will get a prompt asking permission to create a new dat. A dat site is be created for your wiki, and your new wiki will be openned in a new browser tab."
+      },
+      "date": 1536832237865
+    }
+  ]
+}
