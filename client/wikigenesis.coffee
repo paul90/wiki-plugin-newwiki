@@ -1,6 +1,8 @@
 
 # set an initial defaults to use...
 templateDefault = 'empty-site-fedwiki.hashbase.io'
+lineupDefault = '#view/welcome-visitors/view/youre-new-here'
+lineupRegex = /^#(?:(?:[a-z0-9-]+\/[a-z0-9-]+)\/*)+/
 
 expand = (text)->
   text
@@ -47,8 +49,8 @@ submit = ($item, item) ->
 
   console.log "new wiki:", data
 
-  templateDAT = ''
-  template = {}
+  rawTemplateDAT = ''
+  rawLineUP = ''
   for line in item.text.split /\r?\n/
     continue unless words = line.match /\S+/g
     try
@@ -56,19 +58,33 @@ submit = ($item, item) ->
       switch op
         when '' then
         when 'TEMPLATE'
-          templateDAT = arg
+          rawTemplateDAT = arg
+        when 'LINEUP'
+          rawLineUP = arg
     catch error
       console.log "New Wiki error:", error
-  if templateDAT is ''
-    templateDAT = templateDefault
-  templateURL = "dat://" + templateDAT
-  console.log "template url:", templateURL
-  rawTemplateURL = await DatArchive.resolveName(templateURL)
-  console.log "raw template url:", rawTemplateURL
 
-  await DatArchive.fork(rawTemplateURL, {
+  if rawTemplateDAT is ''
+    rawTemplateDAT = templateDefault
+  rawTemplateURL = "dat://" + rawTemplateDAT
+  templateURL = await DatArchive.resolveName(rawTemplateURL)
+
+  if rawLineUP is ''
+    rawLineUP = lineupDefault
+
+  console.log "rawLineUP", rawLineUP
+  console.log "regex", lineupRegex.test(rawLineUP)
+
+  if rawLineUP.startsWith('#') and lineupRegex.test(rawLineUP)
+    lineUP = rawLineUP
+  else
+    lineUP = lineupDefault
+
+
+  await DatArchive.fork(templateURL, {
     title: data.title
     description: data.description
+    type: ['federated-wiki-site']
     prompt: false
     })
   .then (newWikiArchive) ->
@@ -80,7 +96,8 @@ submit = ($item, item) ->
     parsedData['author'] = data.wikiowner
     await newWikiArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
 
-    newURL = newWikiArchive.url + "#view/welcome-visitors/view/how-to-wiki"
+    newURL = newWikiArchive.url + lineUP
+    console.log "newURL", newURL
 
     window.open(newURL, newWikiArchive.url)
   .catch (error) ->
