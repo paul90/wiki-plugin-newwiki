@@ -1,1 +1,173 @@
-{"title":"Sharing Your Wiki","story":[{"type":"paragraph","id":"96a60ccbb6c7eee4","text":"Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."},{"type":"markdown","id":"ed8e77fda2df157f","text":"There are a few options available to keep your wiki available when you are not online:"},{"type":"markdown","id":"56b95bd3ec32d81b","text":"- In a small group writing in wiki together, you could ask the group to help seed your wiki with Beaker's [dat://beakerbrowser.com/docs/tour/#core-concept-peers-and-seeding seeding menu],"},{"type":"markdown","id":"62b8540bde3a0cd8","text":"- Share your wiki's URL with a seeding service like [https://hashbase.io/ Hashbase],"},{"type":"markdown","id":"8147ced26b995446","text":"- Or setup your own seeding server with a tool like [https://github.com/beakerbrowser/homebase homebase]."},{"type":"markdown","id":"1b78cc4ffcb48888","text":"Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. \n"},{"type":"markdown","id":"0cfed7b8becebc27","text":"Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. \n"},{"type":"markdown","id":"3e9cdc8cbca9af95","text":"A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."}],"journal":[{"type":"create","item":{"title":"Sharing Your Wiki","story":[]},"date":1537882945270},{"item":{"type":"paragraph","id":"96a60ccbb6c7eee4","text":"Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."},"id":"96a60ccbb6c7eee4","type":"add","date":1537882946867},{"type":"edit","id":"96a60ccbb6c7eee4","item":{"type":"paragraph","id":"96a60ccbb6c7eee4","text":"Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."},"date":1537882957089},{"item":{"type":"markdown","id":"ed8e77fda2df157f","text":"There are a few options available to keep your wiki available when you are not online:"},"id":"ed8e77fda2df157f","type":"add","after":"96a60ccbb6c7eee4","date":1537882959554},{"type":"edit","id":"ed8e77fda2df157f","item":{"type":"markdown","id":"ed8e77fda2df157f","text":"There are a few options available to keep your wiki available when you are not online:"},"date":1537882979291},{"type":"add","id":"56b95bd3ec32d81b","item":{"type":"markdown","id":"56b95bd3ec32d81b","text":"- In a small group writing in wiki together, you could ask the group to help seed your wiki with Beaker's [dat://beakerbrowser.com/docs/tour/#core-concept-peers-and-seeding seeding menu],"},"after":"ed8e77fda2df157f","date":1537882985704},{"type":"add","id":"62b8540bde3a0cd8","item":{"type":"markdown","id":"62b8540bde3a0cd8","text":"- Share your wiki's URL with a seeding service like [https://hashbase.io/ Hashbase],"},"after":"56b95bd3ec32d81b","date":1537882990946},{"type":"add","id":"8147ced26b995446","item":{"type":"markdown","id":"8147ced26b995446","text":"- Or setup your own seeding server with a tool like [https://github.com/beakerbrowser/homebase homebase]."},"after":"62b8540bde3a0cd8","date":1537882994321},{"type":"add","id":"1b78cc4ffcb48888","item":{"type":"markdown","id":"1b78cc4ffcb48888","text":"Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."},"after":"8147ced26b995446","date":1537882998528},{"type":"edit","id":"1b78cc4ffcb48888","item":{"type":"markdown","id":"1b78cc4ffcb48888","text":"Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. \n"},"date":1537886655626},{"type":"add","id":"0cfed7b8becebc27","item":{"type":"markdown","id":"0cfed7b8becebc27","text":"Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. \n"},"after":"1b78cc4ffcb48888","date":1537886664445},{"type":"add","id":"3e9cdc8cbca9af95","item":{"type":"markdown","id":"3e9cdc8cbca9af95","text":"A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."},"after":"0cfed7b8becebc27","date":1537886667351}],"plugin":"wikigenesis"}
+{
+  "title": "Sharing Your Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "96a60ccbb6c7eee4",
+      "text": "Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."
+    },
+    {
+      "type": "markdown",
+      "id": "ed8e77fda2df157f",
+      "text": "There are a few options available to keep your wiki available when you are not online:"
+    },
+    {
+      "type": "markdown",
+      "id": "56b95bd3ec32d81b",
+      "text": "- In a small group writing in wiki together, you could ask the group to help seed your wiki with Beaker's [dat://beakerbrowser.com/docs/tour/#core-concept-peers-and-seeding seeding menu],"
+    },
+    {
+      "type": "markdown",
+      "id": "62b8540bde3a0cd8",
+      "text": "- Share your wiki's URL with a seeding service like [https://hashbase.io/ Hashbase],"
+    },
+    {
+      "type": "markdown",
+      "id": "8147ced26b995446",
+      "text": "- Or setup your own seeding server with a tool like [https://github.com/beakerbrowser/homebase homebase]."
+    },
+    {
+      "type": "markdown",
+      "id": "1b78cc4ffcb48888",
+      "text": "Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. \n"
+    },
+    {
+      "type": "markdown",
+      "id": "0cfed7b8becebc27",
+      "text": "Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. \n"
+    },
+    {
+      "type": "markdown",
+      "id": "3e9cdc8cbca9af95",
+      "text": "A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Sharing Your Wiki",
+        "story": []
+      },
+      "date": 1537882945270
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "96a60ccbb6c7eee4",
+        "text": "Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."
+      },
+      "id": "96a60ccbb6c7eee4",
+      "type": "add",
+      "date": 1537882946867
+    },
+    {
+      "type": "edit",
+      "id": "96a60ccbb6c7eee4",
+      "item": {
+        "type": "paragraph",
+        "id": "96a60ccbb6c7eee4",
+        "text": "Your newly created wiki will only be available to others while you're running Beaker, and if they either know its 64 character address or its being linked to a site in their neighbourhood."
+      },
+      "date": 1537882957089
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "ed8e77fda2df157f",
+        "text": "There are a few options available to keep your wiki available when you are not online:"
+      },
+      "id": "ed8e77fda2df157f",
+      "type": "add",
+      "after": "96a60ccbb6c7eee4",
+      "date": 1537882959554
+    },
+    {
+      "type": "edit",
+      "id": "ed8e77fda2df157f",
+      "item": {
+        "type": "markdown",
+        "id": "ed8e77fda2df157f",
+        "text": "There are a few options available to keep your wiki available when you are not online:"
+      },
+      "date": 1537882979291
+    },
+    {
+      "type": "add",
+      "id": "56b95bd3ec32d81b",
+      "item": {
+        "type": "markdown",
+        "id": "56b95bd3ec32d81b",
+        "text": "- In a small group writing in wiki together, you could ask the group to help seed your wiki with Beaker's [dat://beakerbrowser.com/docs/tour/#core-concept-peers-and-seeding seeding menu],"
+      },
+      "after": "ed8e77fda2df157f",
+      "date": 1537882985704
+    },
+    {
+      "type": "add",
+      "id": "62b8540bde3a0cd8",
+      "item": {
+        "type": "markdown",
+        "id": "62b8540bde3a0cd8",
+        "text": "- Share your wiki's URL with a seeding service like [https://hashbase.io/ Hashbase],"
+      },
+      "after": "56b95bd3ec32d81b",
+      "date": 1537882990946
+    },
+    {
+      "type": "add",
+      "id": "8147ced26b995446",
+      "item": {
+        "type": "markdown",
+        "id": "8147ced26b995446",
+        "text": "- Or setup your own seeding server with a tool like [https://github.com/beakerbrowser/homebase homebase]."
+      },
+      "after": "62b8540bde3a0cd8",
+      "date": 1537882994321
+    },
+    {
+      "type": "add",
+      "id": "1b78cc4ffcb48888",
+      "item": {
+        "type": "markdown",
+        "id": "1b78cc4ffcb48888",
+        "text": "Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."
+      },
+      "after": "8147ced26b995446",
+      "date": 1537882998528
+    },
+    {
+      "type": "edit",
+      "id": "1b78cc4ffcb48888",
+      "item": {
+        "type": "markdown",
+        "id": "1b78cc4ffcb48888",
+        "text": "Using a seeding service like Hashbase, or running your own, has the advantage that you can have your wiki mirrored over HTTPS, and give it a custom short name. \n"
+      },
+      "date": 1537886655626
+    },
+    {
+      "type": "add",
+      "id": "0cfed7b8becebc27",
+      "item": {
+        "type": "markdown",
+        "id": "0cfed7b8becebc27",
+        "text": "Mirroring over HTTPS will make your wiki more generally accessible to the wider federation. \n"
+      },
+      "after": "1b78cc4ffcb48888",
+      "date": 1537886664445
+    },
+    {
+      "type": "add",
+      "id": "3e9cdc8cbca9af95",
+      "item": {
+        "type": "markdown",
+        "id": "3e9cdc8cbca9af95",
+        "text": "A custom name has the advantage of being easier to remember and share, but be aware that custom name and the underlying 64 character address will treated as treated as seperate wiki with identical contents."
+      },
+      "after": "0cfed7b8becebc27",
+      "date": 1537886667351
+    }
+  ],
+  "plugin": "wikigenesis"
+}

@@ -1,6 +1,6 @@
 
 # set an initial defaults to use...
-templateDefault = 'empty-site-fedwiki.hashbase.io'
+templateDefault = 'federated-wiki-empty-wiki.hashbase.io'
 lineupDefault = '#view/welcome-visitors/view/youre-new-here'
 lineupRegex = /^#(?:(?:[a-z0-9-]+\/[a-z0-9-]+)\/*)+/
 
