@@ -80,6 +80,9 @@ submit = ($item, item) ->
   else
     lineUP = lineupDefault
 
+  # ensure that the empty wiki is downloaded.
+  archiveEmptyWiki = new DatArchive(templateURL)
+  await archiveEmptyWiki.download('/')
 
   await DatArchive.fork(templateURL, {
     title: data.title
