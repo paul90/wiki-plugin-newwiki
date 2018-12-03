@@ -83,29 +83,60 @@ submit = ($item, item) ->
   # ensure that the empty wiki is downloaded.
   archiveEmptyWiki = new DatArchive(templateURL)
   await archiveEmptyWiki.download('/')
+  .then () ->
+    console.log 'template downloaded'
+# a delay here until issue resolved https://github.com/beakerbrowser/beaker/issues/1275
+    await Promise.all([
+      await DatArchive.fork(templateURL, {
+        title: data.title
+        description: data.description
+        type: ['federated-wiki-site']
+        prompt: false
+        }),
+      timeout(5000)
+      ])
+    .then (newArchive) ->
+      newArchive = newArchive[0]
+      console.log "New wiki created", newArchive.url
 
-  await DatArchive.fork(templateURL, {
-    title: data.title
-    description: data.description
-    type: ['federated-wiki-site']
-    prompt: false
-    })
-  .then (newWikiArchive) ->
-    try
-      rawData = await newWikiArchive.readFile('/wiki.json')
+      rawData = await newArchive.readFile('/wiki.json')
+      .catch (error) ->
+        console.log "wiki.json either missing from template wiki, or .fork() is slow", error
       parsedData = JSON.parse(rawData)
-    catch error
-      console.log "Error loading wiki.json:", error
-    parsedData['author'] = data.wikiowner
-    await newWikiArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
+      parsedData['author'] = data.wikiowner
+      await newArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
+      .then () ->
+        newURL = newArchive.url + lineUP
+        window.open(newURL, newArchive.url)
+    , (error) ->
+      console.log "Error creating new wiki", error
+  , (error) ->
+    console.log "Error downloading template", error
 
-    newURL = newWikiArchive.url + lineUP
-    console.log "newURL", newURL
 
-    window.open(newURL, newWikiArchive.url)
+timeout = (ms) ->
+  new Promise((resolve) ->
+    setTimeout resolve, ms
+    return)
+
+finalizeNewWiki = (archive) ->
+
+
+###
+  .then (newWikiArchive) ->
+    await newWikiArchive.readFile('/wiki.json')
+    .then (rawData) ->
+      parsedData = JSON.parse(rawData)
+      parsedData['author'] = data.wikiowner
+      await newWikiArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
+      .then () ->
+        newURL = newWikiArchive.url + lineUP
+        window.open(newURL, newWikiArchive.url)
+    .catch (error) ->
+      console.log "Error loading wiki.json", error
   .catch (error) ->
-    console.log "Creating New Wiki: ", error
-
+    console.log "Error creating new wiki", error
+###
 
 emit = ($item, item) ->
 
