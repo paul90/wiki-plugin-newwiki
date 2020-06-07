@@ -412,11 +412,6 @@
         "text": "Tell us what you are doing. You might just be Exploring Wiki. Say that. Make it a link. Go to that page and write about your explorations. You can change all this later, or simply create another wiki."
       },
       "date": 1537865735964
-    },
-    {
-      "type": "fork",
-      "site": "federated-wiki-client.hashbase.io",
-      "date": 1537882668990
     }
   ]
 }

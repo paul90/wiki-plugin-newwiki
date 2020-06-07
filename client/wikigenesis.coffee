@@ -1,6 +1,7 @@
 
 # set an initial defaults to use...
-templateDefault = 'federated-wiki-empty-wiki.hashbase.io'
+# having a name, rather than a key, here would be good - but until there is a name to key lookup...
+templateDefault = 'd85f3b7f57ff7597757d223e20932d1a6460e5c1abf23b1995b037964fb492c9'
 lineupDefault = '#view/welcome-visitors/view/youre-new-here'
 lineupRegex = /^#(?:(?:[a-z0-9-]+\/[a-z0-9-]+)\/*)+/
 
@@ -66,77 +67,40 @@ submit = ($item, item) ->
 
   if rawTemplateDAT is ''
     rawTemplateDAT = templateDefault
-  rawTemplateURL = "dat://" + rawTemplateDAT
-  templateURL = await DatArchive.resolveName(rawTemplateURL)
+  rawTemplateURL = "hyper://" + rawTemplateDAT
+  templateURL = await beaker.hyperdrive.getInfo(rawTemplateURL).then( (x) -> x.key)
 
   if rawLineUP is ''
     rawLineUP = lineupDefault
 
-  console.log "rawLineUP", rawLineUP
-  console.log "regex", lineupRegex.test(rawLineUP)
+  console.log "rawLineUP", rawLineUP, lineupRegex.test(rawLineUP)
 
   if rawLineUP.startsWith('#') and lineupRegex.test(rawLineUP)
     lineUP = rawLineUP
   else
     lineUP = lineupDefault
 
-  # ensure that the empty wiki is downloaded.
-  archiveEmptyWiki = new DatArchive(templateURL)
-  await archiveEmptyWiki.download('/')
-  .then () ->
-    console.log 'template downloaded'
-# a delay here until issue resolved https://github.com/beakerbrowser/beaker/issues/1275
-    await Promise.all([
-      await DatArchive.fork(templateURL, {
-        title: data.title
-        description: data.description
-        type: ['federated-wiki-site']
-        prompt: false
-        }),
-      timeout(5000)
-      ])
-    .then (newArchive) ->
-      newArchive = newArchive[0]
-      console.log "New wiki created", newArchive.url
+  await beaker.hyperdrive.forkDrive(templateURL, {
+    title: data.title
+    description: data.description
+    detached: true
+    prompt: false
+  })
+  .then (newWiki) ->
+    console.log 'new wiki', newWiki
+    console.log "New wiki created", newWiki.url
 
-      rawData = await newArchive.readFile('/wiki.json')
-      .catch (error) ->
-        console.log "wiki.json either missing from template wiki, or .fork() is slow", error
-      parsedData = JSON.parse(rawData)
-      parsedData['author'] = data.wikiowner
-      await newArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
-      .then () ->
-        newURL = newArchive.url + lineUP
-        window.open(newURL, newArchive.url)
-    , (error) ->
-      console.log "Error creating new wiki", error
-  , (error) ->
-    console.log "Error downloading template", error
-
-
-timeout = (ms) ->
-  new Promise((resolve) ->
-    setTimeout resolve, ms
-    return)
-
-finalizeNewWiki = (archive) ->
-
-
-###
-  .then (newWikiArchive) ->
-    await newWikiArchive.readFile('/wiki.json')
-    .then (rawData) ->
-      parsedData = JSON.parse(rawData)
-      parsedData['author'] = data.wikiowner
-      await newWikiArchive.writeFile('/wiki.json', JSON.stringify(parsedData, null, '\t'))
-      .then () ->
-        newURL = newWikiArchive.url + lineUP
-        window.open(newURL, newWikiArchive.url)
+    wikiData = await newWiki.readFile('/wiki.json', 'json')
     .catch (error) ->
-      console.log "Error loading wiki.json", error
+      console.log 'wiki.json missing from template wiki', error
+    wikiData['author'] = data.wikiowner
+    await newWiki.writeFile('/wiki.json', JSON.stringify(wikiData, null, '\t'))
+    .then () ->
+      newURL = newWiki.url + lineUP
+      window.open newURL, newWiki.url
   .catch (error) ->
-    console.log "Error creating new wiki", error
-###
+    console.log 'Error creating new wiki', error
+
 
 emit = ($item, item) ->
 
@@ -159,9 +123,9 @@ emit = ($item, item) ->
       console.log "New Wiki error:", error
   if templateDAT is ''
     templateDAT = templateDefault
-  template.url = "dat://" + templateDAT
+  template.url = "hyper://" + templateDAT
   template.site = templateDAT
-  templateArchive = new DatArchive(template.url)
+  templateArchive = beaker.hyperdrive.drive(template.url)
   templateInfo = await templateArchive.getInfo()
   template.title = templateInfo.title
   template.description = templateInfo.description
