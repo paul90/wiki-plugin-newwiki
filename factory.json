@@ -1,5 +1,8 @@
 {
   "name": "WikiGenesis",
   "title": "WikiGenesis Plugin",
-  "category": "other"
+  "category": "other",
+  "pages": [
+    "Sharing Your Wiki"
+  ]
 }
