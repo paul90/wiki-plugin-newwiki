@@ -4,12 +4,12 @@
     {
       "type": "paragraph",
       "id": "ecc5ed451bbe7af2",
-      "text": "We create a new wiki site using an empty wiki as a template. If you are creating a wiki as part of a community, they may have a modified create wiki page."
+      "text": "We create a new wiki site using a template. By default this template will be an empty wiki."
     },
     {
       "type": "paragraph",
       "id": "baf1188e0516c91f",
-      "text": "In the form below the wiki name and description will be used in the creation of the dat for your wiki, and will help you locate your wiki in your library. The owner’s name you enter will appear as the name the site is owned by in the wiki footer."
+      "text": "In the form below the wiki name and description will be used in the creation of the hyperdrive for your wiki, and will help you locate your wiki in your library. The owner’s name will appear in the wiki footer."
     },
     {
       "type": "wikigenesis",
@@ -19,7 +19,7 @@
     {
       "type": "paragraph",
       "id": "77d2cef6f22b5893",
-      "text": "When you press \"Create Wiki\", you will get a prompt asking permission to create a new dat. A dat site is be created for your wiki, and your new wiki will be openned in a new browser tab."
+      "text": "When you press \"Create Wiki\", you will get a prompted asking permission to create a new hyperdrive, and write to it. A hyperdrive is created for your new wiki, and it will be opened in a new browser tab."
     }
   ],
   "journal": [
@@ -123,6 +123,36 @@
         "text": "When you press \"Create Wiki\", you will get a prompt asking permission to create a new dat. A dat site is be created for your wiki, and your new wiki will be openned in a new browser tab."
       },
       "date": 1536832237865
+    },
+    {
+      "type": "edit",
+      "id": "ecc5ed451bbe7af2",
+      "item": {
+        "type": "paragraph",
+        "id": "ecc5ed451bbe7af2",
+        "text": "We create a new wiki site using a template. By default this template will be an empty wiki."
+      },
+      "date": 1591891416433
+    },
+    {
+      "type": "edit",
+      "id": "baf1188e0516c91f",
+      "item": {
+        "type": "paragraph",
+        "id": "baf1188e0516c91f",
+        "text": "In the form below the wiki name and description will be used in the creation of the hyperdrive for your wiki, and will help you locate your wiki in your library. The owner’s name will appear in the wiki footer."
+      },
+      "date": 1591891488311
+    },
+    {
+      "type": "edit",
+      "id": "77d2cef6f22b5893",
+      "item": {
+        "type": "paragraph",
+        "id": "77d2cef6f22b5893",
+        "text": "When you press \"Create Wiki\", you will get a prompted asking permission to create a new hyperdrive, and write to it. A hyperdrive is created for your new wiki, and it will be opened in a new browser tab."
+      },
+      "date": 1591891572035
     }
   ]
 }
