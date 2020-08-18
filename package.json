@@ -22,7 +22,7 @@
     "grunt-contrib-coffee": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-mocha-test": "^0.13.3",
-    "mocha": "*"
+    "mocha": "^8.1.1"
   },
   "license": "MIT",
   "repository": {
